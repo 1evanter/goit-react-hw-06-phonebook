@@ -23,17 +23,7 @@ export const App = () => {
 }, [contacts])
 
 
- const addContact = newContact => {
-    if (contacts.find(contact => contact.name === newContact.name)) {
-      alert(`${newContact.name} is already in contacts.`);
-      return;
-    }
 
-   setContacts(prevState =>
-        ([...prevState, newContact])
-   )
-   
-  }
 
   const changeFilter = e => {
    setFilter(e.currentTarget.value)
@@ -52,7 +42,7 @@ setContacts(prevState => prevState.filter(contact => contact.id !== contactId))
  return (
       <div style={{margin: "30px"}}>
         <h1>Phonebook</h1>
-        <ContactForm onAdd={addContact} />
+        <ContactForm />
         <h2 style={{marginBottom: "10px"}}>Contacts</h2>
         <Filter onChange={changeFilter} value={filter} />
         <ContactList contacts={filteredList()} onDelete={handleDelete} />

@@ -2,36 +2,36 @@ import { ContactForm } from "./ContactForm/ContactForm";
 import { GlobalStyle } from "components/GlobalStyle";
 import { ContactList } from "./ContactList/ContactList";
 import { Filter } from "./Filter/Filter";
-import { useEffect, useState } from "react";
 
-const getContacts = () => {
-  const savedContacts = localStorage.getItem('contacts');
-  if (savedContacts !== null) {
-    return JSON.parse(savedContacts)
-  }
-}
+
+// const getContacts = () => {
+//   const savedContacts = localStorage.getItem('contacts');
+//   if (savedContacts !== null) {
+//     return JSON.parse(savedContacts)
+//   }
+// }
 
 export const App = () => {
-  const [contacts, setContacts] = useState(getContacts);
-  const [filter, setFilter] = useState('');
+//   const [contacts, setContacts] = useState(getContacts);
+//   const [filter, setFilter] = useState('');
 
-  useEffect(() => {
-    if (!contacts) {
-      return
-    }
-  localStorage.setItem('contacts', JSON.stringify(contacts));
-}, [contacts])
+//   useEffect(() => {
+//     if (!contacts) {
+//       return
+//     }
+//   localStorage.setItem('contacts', JSON.stringify(contacts));
+// }, [contacts])
 
 
   // const changeFilter = e => {
   //  setFilter(e.currentTarget.value)
   // }
 
- const filteredList = () => {
-    return contacts.filter(({ name }) =>
-      name.toLowerCase().includes(filter.toLowerCase())
-    );
-  };
+//  const filteredList = () => {
+//     return contacts.filter(({ name }) =>
+//       name.toLowerCase().includes(filter.toLowerCase())
+//     );
+//   };
 
 //   const handleDelete = contactId => {
 // setContacts(prevState => prevState.filter(contact => contact.id !== contactId))
@@ -43,7 +43,7 @@ export const App = () => {
         <ContactForm />
         <h2 style={{marginBottom: "10px"}}>Contacts</h2>
         <Filter />
-        <ContactList contacts={filteredList()} />
+        <ContactList />
         <GlobalStyle/>
       </div>
   )

@@ -23,11 +23,9 @@ export const App = () => {
 }, [contacts])
 
 
-
-
-  const changeFilter = e => {
-   setFilter(e.currentTarget.value)
-  }
+  // const changeFilter = e => {
+  //  setFilter(e.currentTarget.value)
+  // }
 
  const filteredList = () => {
     return contacts.filter(({ name }) =>
@@ -44,7 +42,7 @@ setContacts(prevState => prevState.filter(contact => contact.id !== contactId))
         <h1>Phonebook</h1>
         <ContactForm />
         <h2 style={{marginBottom: "10px"}}>Contacts</h2>
-        <Filter onChange={changeFilter} value={filter} />
+        <Filter value={filter} />
         <ContactList contacts={filteredList()} onDelete={handleDelete} />
         <GlobalStyle/>
       </div>

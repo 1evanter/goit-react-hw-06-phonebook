@@ -18,7 +18,7 @@ export const ContactItem = () => {
     
     return (
         
-        filteredList.map(({name, number, id}) => {
+        filteredList().map(({name, number, id}) => {
             return (
                 <Item key={nanoid()}>{name}: {number}
                     <Button onClick={() => dispatch(deleteContact(id))} type="button">Delete</Button>

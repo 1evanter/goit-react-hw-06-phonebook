@@ -33,17 +33,17 @@ export const App = () => {
     );
   };
 
-  const handleDelete = contactId => {
-setContacts(prevState => prevState.filter(contact => contact.id !== contactId))
-}
+//   const handleDelete = contactId => {
+// setContacts(prevState => prevState.filter(contact => contact.id !== contactId))
+// }
 
  return (
       <div style={{margin: "30px"}}>
         <h1>Phonebook</h1>
         <ContactForm />
         <h2 style={{marginBottom: "10px"}}>Contacts</h2>
-        <Filter value={filter} />
-        <ContactList contacts={filteredList()} onDelete={handleDelete} />
+        <Filter />
+        <ContactList contacts={filteredList()} />
         <GlobalStyle/>
       </div>
   )

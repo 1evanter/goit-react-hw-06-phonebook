@@ -23,19 +23,6 @@ export const App = () => {
 // }, [contacts])
 
 
-  // const changeFilter = e => {
-  //  setFilter(e.currentTarget.value)
-  // }
-
-//  const filteredList = () => {
-//     return contacts.filter(({ name }) =>
-//       name.toLowerCase().includes(filter.toLowerCase())
-//     );
-//   };
-
-//   const handleDelete = contactId => {
-// setContacts(prevState => prevState.filter(contact => contact.id !== contactId))
-// }
 
  return (
       <div style={{margin: "30px"}}>

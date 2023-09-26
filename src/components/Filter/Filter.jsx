@@ -3,8 +3,6 @@ import { Input } from "./Filter.styled"
 import { Label } from "components/ContactForm/ContactForm.styled"
 import { changeFilter } from "redux/filterSlice";
 
-
-
 export const Filter = () => {
     
     const dispatch = useDispatch();

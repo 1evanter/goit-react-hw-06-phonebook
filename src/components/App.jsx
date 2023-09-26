@@ -3,27 +3,7 @@ import { GlobalStyle } from "components/GlobalStyle";
 import { ContactList } from "./ContactList/ContactList";
 import { Filter } from "./Filter/Filter";
 
-
-// const getContacts = () => {
-//   const savedContacts = localStorage.getItem('contacts');
-//   if (savedContacts !== null) {
-//     return JSON.parse(savedContacts)
-//   }
-// }
-
 export const App = () => {
-//   const [contacts, setContacts] = useState(getContacts);
-//   const [filter, setFilter] = useState('');
-
-//   useEffect(() => {
-//     if (!contacts) {
-//       return
-//     }
-//   localStorage.setItem('contacts', JSON.stringify(contacts));
-// }, [contacts])
-
-
-
  return (
       <div style={{margin: "30px"}}>
         <h1>Phonebook</h1>

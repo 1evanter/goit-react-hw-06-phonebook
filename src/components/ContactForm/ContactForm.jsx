@@ -4,12 +4,10 @@ import { nanoid } from 'nanoid';
 import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'redux/contactsSlice';
 
-
 export const ContactForm = () => {
     
     const dispatch = useDispatch();
     const contacts = useSelector(state => state.contacts)
-
      
 const handleSubmit = newContact => {
     if (contacts.find(contact => contact.name === newContact.name)) {
@@ -18,7 +16,6 @@ const handleSubmit = newContact => {
     }
 
     dispatch(addContact({ id: nanoid(), ...newContact }));
-   
   }
 
     return (
@@ -30,11 +27,9 @@ const handleSubmit = newContact => {
            
             onSubmit={(values, actions) =>
                { handleSubmit(values);
-                actions.resetForm()
+                actions.resetForm()}
             }
-            }
-         
-        >
+         >
       <StyledForm>
                 <Label> Name
                 <StyledField name="name"   
